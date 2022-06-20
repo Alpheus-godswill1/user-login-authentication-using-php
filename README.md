@@ -7,21 +7,13 @@
 3. A Visual Studio Code editor is needed 
 4. Internet Connection is needed, to google if errors are encountered  while writing code .
 
-## Database Details For login Form  And Registe Form
+## Database Details For login Form  And Register Form
 1. Database name is called ```Authenticate_login```.
-
-## Table Details For Login Form 
-1. Table name is called ```login_fields```
 
 ## Table Details For Register Form
 1. Table name is called ```register_form```
 
-## Table Rows (login_fields)
-1. login_id
-2. login_name
-3. login_pass
-
-## Table Rows (Register_form)
+## Table Colums (Register_form)
 1. reg_id
 2. reg_name
 3. reg_email
