@@ -29,3 +29,5 @@
 7. reg_zip
 8. reg_pass
 9. reg_pass_confirm.
+
+## Feel free to send in your pull request to help improve this project 
