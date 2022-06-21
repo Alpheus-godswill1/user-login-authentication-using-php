@@ -42,6 +42,13 @@ function fetch_login(){
         //Getting Data From Form.
         $name = mysqli_real_escape_string($connect, $_POST['cus_name']);
         $pass = mysqli_real_escape_string($connect, $_POST['cus_pass']);
+        $remind = mysqli_real_escape_string($connect, $_POST['remind']);
+
+        if(isset($remind)){
+            setcookie('UName', $name , time()+60*60*24*30, "/");
+            setcookie('passIN', $pass , time()+60*60*24*30, "/");
+
+        }
         
         if ($name != '' && $pass != ''){//Validating the fields 
         //SQL statements
@@ -51,7 +58,7 @@ function fetch_login(){
          $result = mysqli_query($connect,$sql);
          $count= mysqli_num_rows($result);//checking the number of rows filled at the database.
          if ($count > 0) {
-             $_SESSION['user'] = 'Login successfully';
+             $_SESSION['user'] = $name ;
             header("Location: ./admin/index.php?logged_in_successfully.");
          }else {
             header("Location: ./login.php?No_data_in_database.");

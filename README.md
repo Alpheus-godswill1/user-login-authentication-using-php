@@ -1,5 +1,10 @@
+# NOTE :
+1. The Template is gotten from [Tailwind](https://github.com/tailwindadmin/admin)
+2. This project contains alot of cookies.
 # Getting Started With The User Login Authentication Using PHP
 >>  stay foolish, stay hungry .
+
+
 
 ## Tools Needed
 1. A laptop is needed
@@ -13,7 +18,8 @@
 ## Table Details For Register Form
 1. Table name is called ```register_form```
 
-## Table Colums (Register_form)
+## Table rows (Register_form)
+>>Table rows are called
 1. reg_id
 2. reg_name
 3. reg_email
@@ -22,6 +28,4 @@
 6. reg_country
 7. reg_zip
 8. reg_pass
-9. reg_pass_confirm
-
-
+9. reg_pass_confirm.
