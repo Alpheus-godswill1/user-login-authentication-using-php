@@ -28,4 +28,7 @@ Then Open index.html.
 
 ## IN PROGRESS:
  * Vue Js based admin panel template
+
+ ## Database Details For login Form  And Register Form .
+1. Database name is called ``` Authenticate_login ```.
  
