@@ -59,7 +59,7 @@ function fetch_login(){
          $count= mysqli_num_rows($result);//checking the number of rows filled at the database.
          if ($count > 0) {
              $_SESSION['user'] = $name ;
-            header("Location: ./admin/index.php?logged_in_successfully.");
+            header("Location: ./backend_admin/index.php?logged_in_successfully.");
          }else {
             header("Location: ./login.php?No_data_in_database.");
          }
