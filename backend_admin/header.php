@@ -1,3 +1,4 @@
+<?php ob_start(); ?>
 <?php include "./include/connect.php";?>
 <!DOCTYPE html>
 <html lang="en">
