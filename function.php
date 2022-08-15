@@ -1,4 +1,4 @@
-<?php include "../backend_admin/include/connect.php";?>
+<?php include "./config.inc.php";?>
 <?php 
 function registerField(){
     global $connect;
