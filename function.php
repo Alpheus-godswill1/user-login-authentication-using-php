@@ -1,5 +1,5 @@
 <?php session_start();?>
-<?php include "../backend_admin/include/connect.php";?>
+<?php include "./backend_admin/include/connect.php";?>
 <?php 
 function registerField(){
     global $connect;
