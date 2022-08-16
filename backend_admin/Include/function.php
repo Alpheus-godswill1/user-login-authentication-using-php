@@ -1,4 +1,4 @@
-<?php include "./config.inc.php";?>
+<?php include "connect.php";?>
 <?php 
 function registerField(){
     global $connect;
@@ -21,14 +21,14 @@ function registerField(){
 
         //Making a query connection 
         $result = mysqli_query($connect,$sql);
-        header("location: ./login.php?login_to_access_account.");
+        header("location: ../../login.php?login_to_access_account.");
         if(!$result){
             die("could not_login_your_data_due_to --> " . mysqli_error($connect));
         }
 
     }
     else {
-        header("Location : ./register.php?Please_fill_the_form_properly.");
+        header("Location : ../../register.php?Please_fill_the_form_properly.");
     }
     }
 }
@@ -51,23 +51,27 @@ function fetch_login(){
         
         if ($name != '' && $pass != ''){//Validating the fields 
         //SQL statements
+        $queryResult = "SELECT * FROM register_form";
         $sql = "SELECT * FROM register_form WHERE reg_name = '$name' && reg_pass ='$pass'";
 
          //Making a query connection 
+         $resultConn = mysqli_query($connect,$queryResult);
          $result = mysqli_query($connect,$sql);
          $count= mysqli_num_rows($result);//checking the number of rows filled at the database.
+         $row = mysqli_fetch_array($resultConn);
+         $name_Database = $row['reg_name'];
          if ($count > 0) {
-             $_SESSION['user'] = $name ;
-            header("Location: ./backend_admin/index.php?logged_in_successfully.");
+             $_SESSION['user'] = $name_Database;
+            header("Location: ../index.php?logged_in_successfully.");
          }else {
-            header("Location: ./login.php?No_data_in_database.");
+            header("Location: ../../login.php?Wrong_entries");
          }
          if(!$result){
              die("could not_login_your_data_due_to --> " . mysqli_error($connect));
          }
         }
         else {//Validation else statement
-            header("location: ./login.php?Please_fill_form.");
+            header("location: ../../login.php?Please_fill_form.");
         }
     }
     
